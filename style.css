@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/564x/26/81/97/2681970b691678e9e5cc6cc0be172eed.jpg'); /* Replace with actual URL */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(8px); /* Apply blur effect */
+}
+
+.card {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Optional: adds a slight blur to the card background */
+}
+
+.text {
+    display: inline-block;
+}
+
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 8px;
+    height: 16px;
+    background: #ffd300; /* Default color */
+    top: 0;
+    animation: confetti 5s ease-in-out -2s infinite;
+}
+
+.confetti-piece:nth-child(1) {
+    left: 7%;
+    background: #ff5733; /* Red */
+    animation-delay: 0s;
+}
+
+.confetti-piece:nth-child(2) {
+    left: 14%;
+    background: #33ff57; /* Green */
+    animation-delay: -1.5s;
+}
+
+.confetti-piece:nth-child(3) {
+    left: 21%;
+    background: #3357ff; /* Blue */
+    animation-delay: -2.5s;
+}
+
+.confetti-piece:nth-child(4) {
+    left: 28%;
+    background: #ff33a1; /* Pink */
+    animation-delay: -3s;
+}
+
+.confetti-piece:nth-child(5) {
+    left: 35%;
+    background: #ffcc00; /* Yellow */
+    animation-delay: -3.5s;
+}
+
+.confetti-piece:nth-child(6) {
+    left: 42%;
+    background: #00ccff; /* Light Blue */
+    animation-delay: -2.5s;
+}
+
+.confetti-piece:nth-child(7) {
+    left: 49%;
+    background: #ff33cc; /* Magenta */
+    animation-delay: -1s;
+}
+
+.confetti-piece:nth-child(8) {
+    left: 56%;
+    background: #33ccff; /* Cyan */
+    animation-delay: -2s;
+}
+
+.confetti-piece:nth-child(9) {
+    left: 63%;
+    background: #ff9933; /* Orange */
+    animation-delay: -3.5s;
+}
+
+.confetti-piece:nth-child(10) {
+    left: 70%;
+    background: #ccff33; /* Lime */
+    animation-delay: -2.5s;
+}
+
+.confetti-piece:nth-child(11) {
+    left: 77%;
+    background: #ff6699; /* Light Pink */
+    animation-delay: -1s;
+}
+
+.confetti-piece:nth-child(12) {
+    left: 84%;
+    background: #6699ff; /* Light Blue */
+    animation-delay: -2s;
+}
+
+.confetti-piece:nth-child(13) {
+    left: 91%;
+    background: #ffcc33; /* Gold */
+    animation-delay: 0s;
+}
+
+.confetti-piece:nth-child(14) {
+    left: 7%;
+    background: #ff5733; /* Red */
+    animation-delay: -1s;
+}
+
+.confetti-piece:nth-child(15) {
+    left: 14%;
+    background: #33ff57; /* Green */
+    animation-delay: -2s;
+}
+
+.confetti-piece:nth-child(16) {
+    left: 21%;
+    background: #3357ff; /* Blue */
+    animation-delay: -3s;
+}
+
+.confetti-piece:nth-child(17) {
+    left: 28%;
+    background: #ff33a1; /* Pink */
+    animation-delay: -4s;
+}
+
+.confetti-piece:nth-child(18) {
+    left: 35%;
+    background: #ffcc00; /* Yellow */
+    animation-delay: -5s;
+}
+
+.confetti-piece:nth-child(19) {
+    left: 42%;
+    background: #00ccff; /* Light Blue */
+    animation-delay: -3s;
+}
+
+.confetti-piece:nth-child(20) {
+    left: 49%;
+    background: #ff33cc; /* Magenta */
+    animation-delay: -2s;
+}
+
+.confetti-piece:nth-child(21) {
+    left: 56%;
+    background: #33ccff; /* Cyan */
+    animation-delay: -3s;
+}
+
+.confetti-piece:nth-child(22) {
+    left: 63%;
+    background: #ff9933; /* Orange */
+    animation-delay: -4s;
+}
+
+.confetti-piece:nth-child(23) {
+    left: 70%;
+    background: #ccff33; /* Lime */
+    animation-delay: -3s;
+}
+
+.confetti-piece:nth-child(24) {
+    left: 77%;
+    background: #ff6699; /* Light Pink */
+    animation-delay: -2s;
+}
+
+.confetti-piece:nth-child(25) {
+    left: 84%;
+    background: #6699ff; /* Light Blue */
+    animation-delay: -3s;
+}
+
+.confetti-piece:nth-child(26) {
+    left: 91%;
+    background: #ffcc33; /* Gold */
+    animation-delay: -1s;
+}
+
+@keyframes confetti {
+    0% {
+        transform: translateY(-100%) rotateZ(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(400%) rotateZ(180deg); /* Increase this value to make the confetti fall further */
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(400%) rotateZ(360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-100%) rotateZ(360deg);
+        opacity: 0;
+    }
+}
